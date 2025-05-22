@@ -1,0 +1,58 @@
+.site-footer {
+    background-color: var(--footer-bg);
+    color: #ccc; /* Chữ màu sáng hơn trên nền tối */
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Cho phép các cột xuống dòng trên màn hình nhỏ */
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.footer-column {
+    flex: 1; /* Chia đều không gian */
+    min-width: 200px; /* Chiều rộng tối thiểu cho mỗi cột */
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-column h4 {
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--secondary-red);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--secondary-red);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444; /* Đường kẻ phân cách */
+    font-size: 0.85em;
+    color: #aaa;
+}

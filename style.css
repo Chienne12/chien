@@ -1,0 +1,126 @@
+/* Biến màu chủ đạo */
+:root {
+    --primary-red: #C00000; /* Màu đỏ đậm */
+    --secondary-red: #FF4136; /* Màu đỏ tươi hơn */
+    --dark-red: #8B0000; /* Màu đỏ tối */
+    --light-red-bg: #FFEBEB; /* Màu nền đỏ nhạt */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ddd;
+    --footer-bg: #2c2c2c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%; /* Cho phép full-width nếu cần */
+    margin: 0 auto;
+}
+
+.main-wrapper {
+    flex-grow: 1; /* Phần nội dung chính chiếm không gian còn lại */
+    max-width: 1200px; /* Giới hạn chiều rộng nội dung chính */
+    margin: 0 auto; /* Căn giữa nội dung chính nếu page-container rộng hơn */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.ad-banner {
+    width: 180px; /* Độ rộng của banner quảng cáo */
+    flex-shrink: 0; /* Không cho co lại */
+    background-color: var(--light-red-bg);
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.ad-banner img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-red);
+}
+
+.ad-banner p {
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+/* Nút chung */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+    margin-right: 10px;
+}
+.btn-login:hover {
+    background-color: var(--light-red-bg);
+}
+
+.btn-signup {
+    background-color: var(--primary-red);
+    color: var(--light-text-color);
+}
+.btn-signup:hover {
+    background-color: var(--dark-red);
+}
+
+.btn-cta { /* Call to action button */
+    background-color: var(--secondary-red);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    font-size: 1.1em;
+}
+.btn-cta:hover {
+    background-color: var(--primary-red);
+}
+
+/* Responsive cơ bản cho màn hình nhỏ */
+@media (max-width: 1024px) {
+    .ad-banner {
+        display: none; /* Ẩn quảng cáo trên màn hình nhỏ */
+    }
+    .main-wrapper {
+        margin: 0 10px; /* Thêm chút padding cho nội dung chính */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-menu li {
+        margin-bottom: 10px;
+    }
+    .search-form {
+        width: 100%;
+    }
+    .top-banner-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .auth-buttons {
+        margin-top: 15px;
+    }
+}
